@@ -7,26 +7,59 @@
     var hauteur , largeur ;
     var meillure34;
     var meillure23 , max34 , max32 , meillure21 , meillure32;
+    var is_affichierDevis = "True";
 
     function Get_Dimenstion_information() {
         hauteur = document.getElementById('hauteur').value
         largeur =  document.getElementById('largeur').value
     }
-    function affichier_switch() {
+    function affichier_switch(is_affichierDevis) {
 
-        // Hide elements with class "affichier_none"
         // hakda bach nraja3 variable array b les element li endhoum hadik class name 
         var affichierNone_collection = document.getElementsByClassName("affichier_none")
-        // b lenght na3ref length ta3 array 
-        for(var i = 0 ; i < affichierNone_collection.length ; i++) {
-            affichierNone_collection[i].style.display="none";
+        var affichierTout_Collection = document.getElementsByClassName("affichier_tout");
+
+        if(is_affichierDevis == "True") {
+
+            // Hide elements with class "affichier_none"
+
+            // b lenght na3ref length ta3 array 
+            for(var i = 0 ; i < affichierNone_collection.length ; i++) {
+                affichierNone_collection[i].style.display="none";
+            }
+
+            // Display elements with class "affichier_tout"
+            for(var i = 0 ; i < affichierTout_Collection.length ; i++) {
+                affichierTout_Collection[i].style.display="block";
+            } 
+
+            var buttonContainer = document.getElementsByClassName("buttunContainer")
+            for(var i = 0 ; i < buttonContainer.length ; i++) {
+                affichierTout_Collection[i].style.display="initial";
+            } 
+            document.getElementById("autreDevis_button").style.display="initial";
+
+        } else if(is_affichierDevis == "False") {
+            // Show elements with class "affichier_none"
+            // b lenght na3ref length ta3 array 
+            for(var i = 0 ; i < affichierNone_collection.length ; i++) {
+                affichierNone_collection[i].style.display="initial";
+            }
+
+            // Hide elements with class "affichier_tout"
+            for(var i = 0 ; i < affichierTout_Collection.length ; i++) {
+                affichierTout_Collection[i].style.display="none";
+            } 
+
+            var buttonContainer = document.getElementsByClassName("buttunContainer")
+            for(var i = 0 ; i < buttonContainer.length ; i++) {
+                affichierTout_Collection[i].style.display="none";
+            } 
+            document.getElementById("autreDevis_button").style.display="none";
         }
 
-        // Display elements with class "affichier_tout"
-        var affichierTout_Collection = document.getElementsByClassName("affichier_tout");
-        for(var i = 0 ; i < affichierTout_Collection.length ; i++) {
-            affichierTout_Collection[i].style.display="block";
-        } 
+
+
     }
   
     function calculeDevis() {
@@ -132,8 +165,13 @@
         }
     }
     function Affichier_devis() {
+        is_affichierDevis = "True";
         Get_Dimenstion_information();
-        affichier_switch()
+        affichier_switch(is_affichierDevis)
         calculeDevis()    
+    }
+    function HideDevis() {
+        is_affichierDevis = "False";
+        affichier_switch(is_affichierDevis);
     }
 

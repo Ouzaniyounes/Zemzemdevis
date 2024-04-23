@@ -101,3 +101,22 @@ label {
     width: 100%;
     display: none;
 }
+#autreDevis_button {
+    height: 35px;
+    width: 150px;
+    border: 2.5px #727476  solid;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    display: none;
+}
+.buttunContainer {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}   
+#autreDevis_button:hover {
+    background-color: #e5017d;
+    color: white;
+}
