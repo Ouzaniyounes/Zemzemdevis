@@ -1,52 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Devis zemzem pub </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="res/zemzemlogo.png">
-</head>
-<body>
-    <div class="devis-container">
-
-        <img src="res/zemzemlogo.png" alt="" id="Zemzem-logo" class="affichier_none">
-        <div class="input-container affichier_none">
-            <label for="hauteur"> hauteur </label>
-            <input type="text" name="" id="hauteur" placeholder="Hauteur" class="input_class" onkeyup="Get_Dimenstion_information()">
-            <label for="largeur"> largeur </label>
-            <input type="text" name="" id="largeur" placeholder="Largeur" class="input_class"  onkeyup="Get_Dimenstion_information()">
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style-login.css">
+        <link rel="icon" href="res/zemzemlogo.png">
+        <title> Zemzempub - Login   </title>
+    </head>
+    <body>
         
-        <div id="Montage" class="affichier_tout">
+            <div class="login-container">
+                <img src="res/zemzemlogo.png" alt="" id="Zemzem-logo">
+                <form action="Login.php" method ="POST">
+                    <div class="input-container">
+                        <input type="text" name="Username_entred" id="Username" placeholder="Username" class="input_class">
+                        <input type="password" name="" id="Password_entred" placeholder="Password" class="input_class">
+                        <p id="password_incorrect"> The password you’ve entered is incorrect. <a id="forget_password" href=""> Forgot password ? </a> </p> 
+                        <div class="Remember">
+                            <input type="checkbox" id="Remember_password">
+                            <label for="Remember_password"> Remember password </label>
+                            <br>
+                        </div>
+                    </div>  
 
-            <h1 id="header1" class="affichier_tout"> La forme impression : </h1>
+                    <button name="Login_button"> Se Connecter </button>
+                    <a id="forget_password" href=""> Forgot password ? </a>
+                </form>
+                    
 
-             <!-- Pour Montage  -->
-            <h2 class="affichier_tout" > Montage :</h2>
-            <p id="dimenstion_sur_30" class="affichier_tout"> </p>
-            <p id="dimenstion_sur_20"class="affichier_tout"> </p>
-            <p id="nombre_pose_30" class="affichier_tout"> </p>
-            <p id="nombre_pose_20" class="affichier_tout"> </p>
-
-            <!-- Pour 62 feuille -->
-            <h2 class="affichier_tout"> Pour 62 feuille :</h2>
-            <p id="tirage_62" class="affichier_tout"> </p>
-            <p id="quantite_62" class="affichier_tout"> </p>
-            <p id="achat_62" class="affichier_tout"></p> </p>
-
-            <!-- Pour 125 feuille -->
-            <h2 class="affichier_tout" > Pour 125 feuille :</h2>
-            <p id="tirage_125" class="affichier_tout"> </p>
-            <p id="quantite_125" class="affichier_tout"> </p>
-            <p id="achat_125" class="affichier_tout"></p> </p>
-
-
-        </div>
-        <div class="buttunContainer">
-            <button id="autreDevis_button" class="affichier_tout" onclick="HideDevis()"> Faire un autre devis </button>
-        </div>
-        <button id="affchier_button" class="affichier_none" onclick="Affichier_devis()"> Affichier Le devis </button>
-        <script src="etiquetteZemzem.js"></script>
-</body>
+            </div>
+        
+    </body>
 </html>
