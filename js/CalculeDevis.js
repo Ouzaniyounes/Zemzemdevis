@@ -149,7 +149,8 @@
             document.getElementById("nombre_pose_30").innerHTML= " Nombre de pose sur 35 : \ " +pose34+ " \ pose "
             document.getElementById("nombre_pose_20").innerHTML= " Nombre de pose sur 25 : \ " +pose23+ " \ pose"
             document.getElementById("nombre_pose_Tout").innerHTML= " Nombre Totale de Pose : \ " +ToutPose+ " \ pose"
-            var  blue = document.getElementsByClassName("headers")
+            var  blue = document.getElementsByClassName("headers");
+
             if(getCheck () == true) {
                 
                 document.getElementById("newNombreHeader").style.display="initial"
@@ -179,6 +180,7 @@
                 document.getElementById("newNombreHeader").style.display="none"
                 // Pour 62 feuille
                 nombreFeuille = 62 ;
+                etiquetteCost = 18000;
                 feuilleCost = 65 * 100;
                 etiquetteCost = etiquetteCost + feuilleCost ;
                 Tirage = nombreFeuille * 8;
@@ -194,7 +196,6 @@
                 etiquetteCost = 18000;
                 feuilleCost = nombreFeuille * 100;
                 etiquetteCost = etiquetteCost + feuilleCost ;
-                console.log("etiquetteCost = "+etiquetteCost);
                 Tirage = nombreFeuille * 8;
                 quantite = Tirage * max34 ;
                 Achat = etiquetteCost / quantite ;
@@ -244,8 +245,10 @@
                 document.getElementById("newNombreHeader").style.display="none"
                 // Pour 62 feuille
                 nombreFeuille = 62 ;
+                etiquetteCost = 18000;
                 feuilleCost = 65 * 100;
                 etiquetteCost = etiquetteCost + feuilleCost ;
+                console.log("etiquetteCost = "+etiquetteCost);
                 Tirage = nombreFeuille * 9;
                 quantite = Tirage * max32;
                 Achat = etiquetteCost / quantite ;
