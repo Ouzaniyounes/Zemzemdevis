@@ -75,14 +75,15 @@ button:hover {
     margin: 5px;
     text-align: left;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
+
 #Remember_password {
     height: 18px;
     width: 18px;
     border: 1px solid #d7dade;
     border-radius: 4px;
+    margin-bottom: 0px;
 }
 label {
     cursor: pointer;

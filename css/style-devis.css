@@ -2,20 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 body {
     margin: 0;
-    /* height: 100vh; */
     width: 100vw;
     background-color: #ffed00;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 #Zemzem-logo {
     height: 35%;
-    width: 40%;
-    
-    
+    width: 40%;    
 }
 .devis-container {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
     min-height: 600px;
     width: 450px;
     margin-top: 40px;
@@ -83,12 +85,10 @@ label {
 } 
  h1 {
     text-align: center;
-    display: nones;
  }
  h1,h2 {
     font-family: "Rubik", sans-serif;
     font-weight:400;
-    display: none;
     color: #e5017d;
  }
  p {
@@ -129,3 +129,47 @@ label {
     border: 1px #c8c7c7 solid;
 
 } 
+
+nav {
+    width: 100vw;
+}
+.navContainer {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+ul {
+    margin-top: 10px;
+}
+.linkContainer  { 
+    width: 300px;
+    display: flex;
+    margin: 0 120px;
+    justify-content: space-between;
+    
+}
+li{
+    padding: 10px;
+    list-style:none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+li:hover {
+    color: white;
+    background-color: #e5017d;
+    border-radius: 30px;
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#LogozemzemNav {
+    height: 100px;
+    width: 100px;
+}
